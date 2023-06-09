@@ -7,8 +7,9 @@ import { SIZES, icons } from '../../../constants';
 
 const Welcome = () => {
   const router = useRouter();
-  const jobTypes = ['full-time', 'contract','special-duties', 'part-time']
+  const jobTypes = ['Enzymology', 'Pharmacology','Nutritional', 'Environmental', 'Medical']
   const [activeJobType, setActiveJobType]  = useState('full-time');
+  const [searchInput, setSearchInput] = useState('');
 
   return (
     <View>
@@ -21,9 +22,9 @@ const Welcome = () => {
         <View style={styles.searchWrapper}>
           <TextInput
             style = {styles.searchInput}
-            value=''
-            onChange={(e)=>{e.target.value}}
-            placeholder='What Research Protocol are you looking for'
+            value= {setSearchInput}
+            onChange={''}
+            placeholder='What research protocol are you looking for?'
           />
         </View>
         <TouchableOpacity style={styles.searchBtn} onPress={()=>{}}>
